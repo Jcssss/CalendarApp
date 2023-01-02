@@ -12,7 +12,18 @@ const Tab = createBottomTabNavigator();
 
 export default function OptionRoutes() {
     return (
-        <Tab.Navigator showIcon={true} screenOptions={{ headerShown: false }}>
+        <Tab.Navigator 
+            showIcon={true} 
+            screenOptions={{
+                headerStyle: {
+                    backgroundColor: '#A55',
+                },
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                    color: 'white'
+                }
+            }}
+        >
             <Tab.Screen 
                 name="Calendar" 
                 component={CalendarRoutes} 

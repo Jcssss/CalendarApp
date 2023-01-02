@@ -56,7 +56,7 @@ export default function Todo({ navigation, route }) {
                 }}
             >
                 <FontAwesomeIcon 
-                    class='fa-bold fa-5x' 
+                    size={20} 
                     icon={faPlus} 
                     style={styles.icon}
                 />
