@@ -45,6 +45,7 @@ export default function MonthView({ navigation }) {
             <CalendarContent 
                 viewDay = {viewDay}
             />
+            {/* test */}
         </View>
     );
 }
