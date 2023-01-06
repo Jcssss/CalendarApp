@@ -2,7 +2,12 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList, ScrollView } from 'react-native';
 import CalendarDays from './CalendarDays';
 
-export default function CalendarContent() {
+// notes:
+// leap year: any year divisible by 4 and 400 but not 100
+// Jan 1st, 2000 fell on a Sunday
+// the year 2000 was a leap year
+
+export default function CalendarContent({ viewDay }) {
     const dayNames = [
         { name: 'Sun', key: '1'},
         { name: 'Mon', key: '2'},
@@ -12,6 +17,8 @@ export default function CalendarContent() {
         { name: 'Fri', key: '6'},
         { name: 'Sat', key: '7'},
     ];
+
+    const firstDayKey = 1;
 
     return (
         <View>
@@ -27,7 +34,7 @@ export default function CalendarContent() {
                 </View>
             </View>
             <View style={{height: 500}}>
-                <CalendarDays />
+                <CalendarDays viewDay={viewDay}/>
             </View>
         </View>
     );
